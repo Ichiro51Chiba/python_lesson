@@ -23,6 +23,9 @@
 
 #################################################
 # エラトステネスのふるい
+import time
+
+t1 = time.time()
 
 def is_primes(num):
     for is_prime in range(1,num):
@@ -40,7 +43,10 @@ def is_primes(num):
             continue
         print(is_prime)
 
-
 is_primes(100)
+
+t2 = time.time()
+elapsed_time = t2-t1
+print(elapsed_time)
 
 ##################################################
