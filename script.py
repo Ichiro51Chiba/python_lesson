@@ -40,10 +40,10 @@ def is_primes(num):
         if is_prime != 7 and is_prime % 7 == 0:
             continue
         if is_prime !=11 and is_prime % 11 == 0:
-            continue
+            break
         print(is_prime)
 
-is_primes(100)
+is_primes(121)
 
 t2 = time.time()
 elapsed_time = t2-t1
