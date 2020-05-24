@@ -1,15 +1,20 @@
-import time
+import math
 
-t1 = time.time()
-
-def is_prime(num):
-    for prime_num in range(2,num):
-        if prime_num % 2 == 0:
-            pass
-        else:      
-            prime_num1= print(prime_num)          
-is_prime(100)
-
-t2 = time.time()
-elapsed_time = t2-t1
-print(elapsed_time)
+def is_primes(num : int) -> bool:
+    # ルートを求める計算
+    sqrt = math.sqrt(num)
+    #is_primeをリストにする
+    lists = list(range(2,num+1))
+    first = lists[0]
+    #先頭がrootの最小まで行う
+    if num != 1 and num <= 3:
+        return True
+    else:
+        while lists[0] <= sqrt:
+            for num2 in lists:
+                if num2 % first == 0 and num2 != first:
+                    return False
+                else:
+                    return True
+result = is_primes(4)
+print(result)
