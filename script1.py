@@ -1,21 +1,17 @@
-import math
+# フィボナッチ数列をやってみる
 
-def is_primes(num : int) -> bool:
-    # ルートを求める計算
-    sqrt = math.sqrt(num)
-    #is_primeをリストにする
-    lists = list(range(2,num+1))
-    new_lists = [2]
-    #先頭がrootの最小まで行う
-    if num != 1 and num <= 3:
-        return True
-    else:
-        while lists[0] <= sqrt:
-            for num2 in new_lists:
-                if num2 % lists[0] == 0 and num2 != lists[0]:
-                    return False
-                else:
-                    new_lists.append(lists[0])
-                    del lists[0]
-result = is_primes(5)
+def fib_num(num):
+
+    if num == 1:
+        return 0
+    if num == 2:
+        return 1
+    if num <= 2:
+        return num
+
+    return fib_num(num - 2) + fib_num(num - 1)
+
+result = fib_num(10)
 print(result)
+
+
