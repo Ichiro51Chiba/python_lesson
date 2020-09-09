@@ -9,6 +9,9 @@ num = 9
 
 def master():
     print("master")
+    
+def master1():
+    print("master1")
 
 
 def sieve_of_eratosthenes(target):
