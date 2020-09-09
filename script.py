@@ -4,6 +4,13 @@ import math
 num = 9
 
 
+
+
+
+def master():
+    print("master")
+
+
 def sieve_of_eratosthenes(target):
     dest = int(math.sqrt(target))
     lists = list(range(2, target + 1))
